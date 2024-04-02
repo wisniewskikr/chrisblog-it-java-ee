@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import javax.enterprise.context.ApplicationScoped;
+
 import com.example.models.HelloWorldModel;
 
+@ApplicationScoped
 public class HelloWorldService {
 
 	private List<HelloWorldModel> messages = new ArrayList<>();
