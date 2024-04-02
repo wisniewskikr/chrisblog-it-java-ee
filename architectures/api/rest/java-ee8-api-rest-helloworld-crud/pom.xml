@@ -14,7 +14,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>rest</finalName>
+        <finalName>api</finalName>
     </build>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
