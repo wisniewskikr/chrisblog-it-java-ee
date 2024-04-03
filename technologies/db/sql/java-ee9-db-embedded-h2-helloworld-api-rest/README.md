@@ -24,7 +24,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to connect **REST API Java** application with **H2 embedded database** using **Java EE 8** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
+The goal of this project is to present how to connect **REST API Java** application with **H2 embedded database** using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
 
 Application is deployed on **payara micro** in version 6.
 
@@ -40,7 +40,7 @@ To launch this application please make sure that the **Preconditions** are met a
 
 ##### Technologies
 This project uses following technologies:
-* **Java EE 8** framework
+* **Java EE 9** framework
 * **H2** embedded database
 
 
