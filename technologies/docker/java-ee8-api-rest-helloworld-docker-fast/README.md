@@ -7,19 +7,19 @@ USAGE COMMANDS
 
 Usage steps:
 1. In a command line tool create package with `mvn clean package`
-1. In a command line tool build Docker image with `docker build -t java-ee8-api-rest-helloworld-docker-simple-image .`
+1. In a command line tool build Docker image with `docker build -t java-ee8-api-rest-helloworld-docker-fast-image .`
 1. (Optional) In a command line tool check list of all images with `docker images`
    * Expected **list of all docker images** downloaded on a computer
-1. In a command line tool start Docker container with `docker run -d -p 8080:8080 --name java-ee8-api-rest-helloworld-docker-simple-container java-ee8-api-rest-helloworld-docker-simple-image`
+1. In a command line tool start Docker container with `docker run -d -p 8080:8080 --name java-ee8-api-rest-helloworld-docker-fast-container java-ee8-api-rest-helloworld-docker-fast-image`
 1. (Optional) In a command line tool check list of all containers with `docker ps -a`
    * Expected **list of all docker containers** installed on a computer
 1. In a http browser (e.g. Chrome) visit `http://localhost:8080/rest/api/hello`
    * Expected JSON **{"message": "Hello World!"}**
-1. (Optional) In a command line tool check application logs with `docker logs java-ee8-api-rest-helloworld-docker-simple-container`
+1. (Optional) In a command line tool check application logs with `docker logs java-ee8-api-rest-helloworld-docker-fast-container`
    * Expected **application logs**
 1. Clean up environment 
-     * In a command line tool stop and remove Docker container with `docker rm -f java-ee8-api-rest-helloworld-docker-simple-container`
-     * In a command line tool stop and remove Docker image with `docker rmi java-ee8-api-rest-helloworld-docker-simple-image`
+     * In a command line tool stop and remove Docker container with `docker rm -f java-ee8-api-rest-helloworld-docker-fast-container`
+     * In a command line tool stop and remove Docker image with `docker rmi java-ee8-api-rest-helloworld-docker-fast-image`
 
 
 USAGE IMAGES
@@ -35,6 +35,8 @@ DESCRIPTION
 The goal of this project is to present how to **dockerize** a **simple REST API Java** application using **Java EE 8** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method.
 
 Dockerize means that application is installed on Docker instead directly on computer. Application is deployed on a Docker Image of **payara micro** in version 5.
+
+**Fast** means that you have to create package first and then this package is used to build Docker image. It's faster solution then building Docker image from the scratch but it requires installation few tools on your computer: Java, Maven etc. And it can't be used if you want to build image on some remote computer.ss
 
 ##### Flow
 The following flow takes place in this project:
