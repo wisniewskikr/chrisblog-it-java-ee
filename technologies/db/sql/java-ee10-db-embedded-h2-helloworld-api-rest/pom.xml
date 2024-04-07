@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>java-ee10-db-embedded-h2-helloworld-initialize-data</artifactId>
+	<artifactId>java-ee10-db-embedded-h2-helloworld-api-rest</artifactId>
 	<version>0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
@@ -33,7 +33,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>jakartaee-hello-world</finalName>
+		<finalName>rest</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
