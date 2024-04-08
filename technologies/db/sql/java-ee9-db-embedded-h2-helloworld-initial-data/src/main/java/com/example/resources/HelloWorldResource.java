@@ -30,8 +30,7 @@ public class HelloWorldResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response helloWorld() {
 
-        Long id = helloWorldService.save(new HelloWorldEntity("Hello World!"));
-        HelloWorldEntity helloWorld = helloWorldService.load(id);
+        HelloWorldEntity helloWorld = helloWorldService.load(1L);
         
         Map<String, String> response = Collections.singletonMap("message", helloWorld.getMessage());
         return Response.ok(response).build();
