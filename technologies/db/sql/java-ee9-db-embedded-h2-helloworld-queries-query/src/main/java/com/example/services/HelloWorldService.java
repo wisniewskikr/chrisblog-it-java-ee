@@ -13,7 +13,7 @@ public class HelloWorldService {
     private EntityManager em;
 
     public HelloWorldEntity load(Long id) {
-        return (HelloWorldEntity) em.createQuery("SELECT h FROM HelloWorldEntity h WHERE h.id=:id")
+        return em.createQuery("SELECT h FROM HelloWorldEntity h WHERE h.id=:id", HelloWorldEntity.class)
             .setParameter("id", id)
             .getSingleResult();
     }

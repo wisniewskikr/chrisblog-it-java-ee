@@ -28,6 +28,8 @@ The goal of this project is to present how to use **Java EE Query** type **Query
 
 Application is deployed on **payara micro** in version 6.
 
+**Query** means that developer uses JPA. So developer in queries uses Java classes instead of SQL tables.
+
 ##### Flow
 The following flow takes place in this project:
 1. User via any browser sends request to application for a content.
