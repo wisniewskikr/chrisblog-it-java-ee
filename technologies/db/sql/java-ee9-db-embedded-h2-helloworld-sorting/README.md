@@ -24,11 +24,13 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to use **Java EE Query** type **Query** in **REST API Java** application with **H2 embedded database** using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
+The goal of this project is to present how to **sort** data in **REST API Java** application with **H2 embedded database** using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
 
 Application is deployed on **payara micro** in version 6.
 
-**Query** means that developer uses JPA. So developer in queries uses Java classes instead of SQL tables.
+**Sorting** is handled manually by adding:
+* ORDER BY <parameter> ASC
+* ORDER BY <parameter> DESC
 
 ##### Flow
 The following flow takes place in this project:
