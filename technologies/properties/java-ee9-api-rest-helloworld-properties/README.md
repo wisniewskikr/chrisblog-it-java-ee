@@ -24,9 +24,11 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **simple REST API Java** application using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
+The goal of this project is to present how to read **properties** from file in **REST API Java** application using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
 
 Application is deployed on **payara micro** in version 6.
+
+Properties are stored in file **application.properties**. They are read by service **PropertyService**.
 
 ##### Flow
 The following flow takes place in this project:
