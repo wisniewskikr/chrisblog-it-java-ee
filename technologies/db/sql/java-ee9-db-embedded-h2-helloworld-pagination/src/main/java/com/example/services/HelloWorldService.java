@@ -16,7 +16,9 @@ public class HelloWorldService {
 
     public HelloWorldEntity loadFirst() {
         
-        List<HelloWorldEntity> list = em.createQuery("SELECT h FROM HelloWorldEntity h ORDER BY h.id ASC", HelloWorldEntity.class)
+        List<HelloWorldEntity> list = em.createQuery("SELECT h FROM HelloWorldEntity h", HelloWorldEntity.class)
+            .setFirstResult(2)
+            .setMaxResults(1)
             .getResultList();        
         return list.get(0);
 

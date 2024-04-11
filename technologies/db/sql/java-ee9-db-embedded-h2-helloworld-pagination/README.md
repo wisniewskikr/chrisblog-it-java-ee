@@ -24,13 +24,11 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to **sort** data in **REST API Java** application with **H2 embedded database** using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
+The goal of this project is to present how to implement **pagination** of data in **REST API Java** application with **H2 embedded database** using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
 
 Application is deployed on **payara micro** in version 6.
 
-**Sorting** is handled manually by adding:
-* ORDER BY <parameter> ASC
-* ORDER BY <parameter> DESC
+**Pagination** means that data is provided in pages - packages - instead of all of them at once.
 
 ##### Flow
 The following flow takes place in this project:
