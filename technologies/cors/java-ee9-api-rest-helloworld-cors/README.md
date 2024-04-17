@@ -24,9 +24,11 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **simple REST API Java** application using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
+The goal of this project is to present how to resolve **CORS** problem in **REST API Java** application using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
 
 Application is deployed on **payara micro** in version 6.
+
+**CORS problem** means that for security reason browsers don't allow for communication between domains. So if you are on "localhost:8080" then browsers allow only for communication with "localhost:8080". But if your application is divided into FE and BE parts then it's problem. FE part by defauld can not communicate with BE part. To resolve it in Java EE 9 you can use **CorsFilter** which adds some parameters to header to turn off CORS on a browser. 
 
 ##### Flow
 The following flow takes place in this project:
