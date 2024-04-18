@@ -10,7 +10,7 @@ Usage steps:
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\rest.war --port 8080`
 1. In a http browser (e.g. Chrome) visit `http://localhost:8080/rest/api/hello`
    * Expected JSON **{"message": "Hello World!"}** in a browser
-   * Expected String **Hello World from Event!** in a console
+   * Expected String **Hello World from Event!** in a console **after 5 seconds**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -25,12 +25,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **event** in a **REST API Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to create **asynchronous event** using **Event.fire()** method in a **REST API Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Event** means that there is one or many **observes** who wait for event. If event happens then observes are informed and also do some action. In other words some action in one place can trigger one or many actions in other places. Implementation consists of:
-* Event: provided by Java EE
-* Event Item: container for information provided between event and observes
-* Event Listener: class with observes method which is triggered by event
+**Event** means that there is one or many **observes** who wait for event. If event happens then observes are informed and also do some action. By default events are synchronous - main thread is blocked until observes finish their actions. But updating event listeners with @Stateless and @Asynchronous makes events asynchronous - main thread is not blocked any more.
 
 ##### Flow
 The following flow takes place in this project:
