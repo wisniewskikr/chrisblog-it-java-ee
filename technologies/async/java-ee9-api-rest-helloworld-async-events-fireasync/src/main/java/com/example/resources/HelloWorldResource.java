@@ -29,7 +29,7 @@ public class HelloWorldResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response helloWorld() {
-        helloWorldEvent.fire(new HelloWorldEventItem("Hello World from Event!", 5000000000L));
+        helloWorldEvent.fireAsync(new HelloWorldEventItem("Hello World from Event!", 5000000000L));
         Map<String, String> response = Collections.singletonMap("message", "Hello World!");
         return Response.ok(response).build();
     }
