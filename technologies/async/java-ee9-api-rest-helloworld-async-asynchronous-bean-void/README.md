@@ -10,6 +10,7 @@ Usage steps:
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\rest.war --port 8080`
 1. In a http browser (e.g. Chrome) visit `http://localhost:8080/rest/api/hello`
    * Expected JSON **{"message": "Hello World!"}**
+   * Expected message **Asynchronous Hello World!** in the console **after 5 seconds**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -24,9 +25,11 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **simple REST API Java** application using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
+The goal of this project is to present how to use **asynchronous bean** with **void** method in **REST API Java** application using **Java EE 9** framework. 
 
 Application is deployed on **payara micro** in version 6.
+
+**Ansychronous bean** is a bean which is started in separate thread. In this example it doesn't return anything. It just displays message on a console. It means that one message is displayed in a browser and then after 5 secodns second message is displayed in a console. These messages are handled by separated threads.
 
 ##### Flow
 The following flow takes place in this project:
