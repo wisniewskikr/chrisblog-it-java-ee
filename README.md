@@ -2,7 +2,8 @@ TO DO
 -----
 
 Todo:
-* Database
+* Multithreads
+* JSF
 * Client (Communication)
 * Subresources
 	* Constructor
