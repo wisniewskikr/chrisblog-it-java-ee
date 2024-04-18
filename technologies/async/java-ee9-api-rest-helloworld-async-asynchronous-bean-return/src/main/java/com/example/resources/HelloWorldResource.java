@@ -2,6 +2,8 @@ package com.example.resources;
 
 import java.util.Collections;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 import com.example.services.AsyncService;
 
@@ -27,10 +29,14 @@ public class HelloWorldResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response helloWorld() {
-        asyncService.displayMessageWithDelay("Asynchronous Hello World!", 5000000000L);
+    public Response helloWorld() throws InterruptedException, ExecutionException {
+
+        Future<String> future = asyncService.displayMessageWithDelay("Asynchronous Hello World!", 5000000000L);
+        System.out.println(future.get());
+        
         Map<String, String> response = Collections.singletonMap("message", "Hello World!");
         return Response.ok(response).build();
+
     }
     
 }

@@ -1,7 +1,9 @@
 package com.example.services;
 
+import java.util.concurrent.Future;
 import java.util.concurrent.locks.LockSupport;
 
+import jakarta.ejb.AsyncResult;
 import jakarta.ejb.Asynchronous;
 import jakarta.ejb.Stateless;
 
@@ -9,10 +11,10 @@ import jakarta.ejb.Stateless;
 @Asynchronous
 public class AsyncService {
     
-    public void displayMessageWithDelay(String message, Long delayNanos) {
+    public Future<String> displayMessageWithDelay(String message, Long delayNanos) {
 
         LockSupport.parkNanos(delayNanos);
-        System.out.println(message);
+        return new AsyncResult<>(message);
 
     }
 
