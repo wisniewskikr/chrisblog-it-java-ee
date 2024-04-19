@@ -10,6 +10,7 @@ Usage steps:
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\rest.war --port 8080`
 1. In a http browser (e.g. Chrome) visit `http://localhost:8080/rest/api/hello`
    * Expected JSON **{"message": "Hello World!"}**
+   * Expected String **Hello World from Timer!** for **every second**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -24,9 +25,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **simple REST API Java** application using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
+The goal of this project is to present how to implement **timer** for **EJB** in **REST API Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-Application is deployed on **payara micro** in version 6.
+**Timer for EJB** that some action in EJB class is run in some specific time periods.
 
 ##### Flow
 The following flow takes place in this project:
