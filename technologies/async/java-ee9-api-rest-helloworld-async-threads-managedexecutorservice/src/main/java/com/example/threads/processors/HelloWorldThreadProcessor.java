@@ -1,14 +1,15 @@
-package com.example.events.listeners;
+package com.example.threads.processors;
 
 import java.util.concurrent.locks.LockSupport;
-import com.example.events.items.HelloWorldEventItem;
+
+import com.example.threads.items.HelloWorldThreadItem;
 
 import jakarta.ejb.Stateless;
 
 @Stateless
-public class HelloWorldEventListener {
+public class HelloWorldThreadProcessor {
     
-    public void onHelloWorldEvent(HelloWorldEventItem item) {
+    public void onHelloWorldAction(HelloWorldThreadItem item) {
         LockSupport.parkNanos(item.getNanosDelay());
         System.out.println(item.getMessage());
     }

@@ -1,12 +1,12 @@
-package com.example.events.items;
+package com.example.threads.items;
 
-public class HelloWorldEventItem {
+public class HelloWorldThreadItem {
     
     private String message;
     private Long nanosDelay;
 
     
-    public HelloWorldEventItem(String message, Long nanosDelay) {
+    public HelloWorldThreadItem(String message, Long nanosDelay) {
         this.message = message;
         this.nanosDelay = nanosDelay;
     }
