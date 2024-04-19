@@ -2,6 +2,7 @@ package com.example.resources;
 
 import java.util.Collections;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 
 import com.example.threads.items.HelloWorldThreadItem;
 import com.example.threads.processors.HelloWorldThreadProcessor;
@@ -35,7 +36,7 @@ public class HelloWorldResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response helloWorld() {
 
-        mes.execute(() -> processor.onHelloWorldAction(new HelloWorldThreadItem("Hello World from Thread!", 5000000000L)));
+        CompletableFuture.runAsync(() -> processor.onHelloWorldAction(new HelloWorldThreadItem("Hello World from Thread!", 5000000000L)), mes);
         Map<String, String> response = Collections.singletonMap("message", "Hello World!");
         return Response.ok(response).build();
         
