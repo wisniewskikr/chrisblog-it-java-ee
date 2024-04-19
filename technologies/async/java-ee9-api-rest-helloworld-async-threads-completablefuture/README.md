@@ -25,9 +25,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **asynchronous thread** using **ManagedExecutorService** class in a **REST API Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to create **asynchronous thread** using **CompletableFuture** class in a **REST API Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-Class **ManagedExecutorService** enables running some method in a new thread.
+Class **CompletableFuture** enables running some method in a new thread. But please be aware that in Java EE you have to use the class **ManagedExecutorService** as a thread provider to avoid resource leak.
 
 ##### Flow
 The following flow takes place in this project:
