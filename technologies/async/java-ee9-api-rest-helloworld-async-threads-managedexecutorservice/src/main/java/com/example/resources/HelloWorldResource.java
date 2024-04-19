@@ -4,14 +4,16 @@ import java.util.Collections;
 import java.util.Map;
 
 import com.example.events.items.HelloWorldEventItem;
+import com.example.events.listeners.HelloWorldEventListener;
 
-import jakarta.enterprise.event.Event;
-import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import jakarta.annotation.Resource;
+import jakarta.enterprise.concurrent.ManagedExecutorService;
+import jakarta.inject.Inject;
 
 /**
  * The REST resource implementation class.
@@ -19,19 +21,24 @@ import jakarta.ws.rs.core.Response;
 @Path("hello")
 public class HelloWorldResource {
 
-    private Event<HelloWorldEventItem> helloWorldEvent;
+    @Resource
+    private ManagedExecutorService mes;
 
+    private HelloWorldEventListener processor;
+    
     @Inject
-    public HelloWorldResource(Event<HelloWorldEventItem> helloWorldEvent) {
-        this.helloWorldEvent = helloWorldEvent;
+    public HelloWorldResource(HelloWorldEventListener processor) {
+        this.processor = processor;
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response helloWorld() {
-        helloWorldEvent.fire(new HelloWorldEventItem("Hello World from Event!", 5000000000L));
+
+        mes.execute(() -> processor.onHelloWorldEvent(new HelloWorldEventItem("Hello World from Thread!", 5000000000L)));
         Map<String, String> response = Collections.singletonMap("message", "Hello World!");
         return Response.ok(response).build();
+        
     }
     
 }

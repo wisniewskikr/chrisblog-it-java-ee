@@ -10,7 +10,7 @@ Usage steps:
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\rest.war --port 8080`
 1. In a http browser (e.g. Chrome) visit `http://localhost:8080/rest/api/hello`
    * Expected JSON **{"message": "Hello World!"}** in a browser
-   * Expected String **Hello World from Event!** in a console **after 5 seconds**
+   * Expected String **Hello World from Thread!** in a console **after 5 seconds**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
