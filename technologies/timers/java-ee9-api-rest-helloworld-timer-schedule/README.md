@@ -25,9 +25,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **timer** for **EJB** in **REST API Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to implement **timer** using **@Schedule** annotation in **REST API Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Timer for EJB** that some action in EJB class is run in some specific time periods.
+Annotaiton **@Schedule** enables running methodsś in some specific time periods.
 
 ##### Flow
 The following flow takes place in this project:
