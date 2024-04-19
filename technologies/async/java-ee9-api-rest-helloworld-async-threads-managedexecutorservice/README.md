@@ -25,9 +25,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **asynchronous event** using **Event.fire()** method in a **REST API Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to create **asynchronous thread** using **ManagedExecutorService** class in a **REST API Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Event** means that there is one or many **observes** who wait for event. If event happens then observes are informed and also do some action. By default events are synchronous - main thread is blocked until observes finish their actions. But updating event listeners with @Stateless and @Asynchronous makes events asynchronous - main thread is not blocked any more.
+Class **ManagedExecutorService** enables running some method in a new thread.
 
 ##### Flow
 The following flow takes place in this project:
