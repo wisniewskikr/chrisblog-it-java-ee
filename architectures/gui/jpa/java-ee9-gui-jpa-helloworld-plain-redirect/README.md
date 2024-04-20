@@ -9,7 +9,7 @@ Usage steps:
 1. In a command line tool create package with `mvn clean package`
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\gui.war --port 8080`
 1. In a http browser (e.g. Chrome) visit `http://localhost:8080/gui`
-   * Expected HTML page **Hello World!**
+   * Expected HTML page **Hello World!** with URL `http://localhost:8080/gui/helloworld`
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -24,9 +24,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **forward** in a **plain GUI JPA Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to implement **redirect** in a **plain GUI JPA Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Forward** means that control is passed from one servlet to another servlet. But user is not aware of it. URL in browser is not changed.
+**Redirect** means that control is passed from one servlet to another servlet. An user is aware of it. An URL in a browser is changed to new one.
 
 ##### Flow
 The following flow takes place in this project:
