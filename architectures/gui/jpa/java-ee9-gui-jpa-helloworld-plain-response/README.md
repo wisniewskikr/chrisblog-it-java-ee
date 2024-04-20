@@ -24,9 +24,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **index** file in a **plain GUI JPA Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to implement simple **response** in a **plain GUI JPA Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Index** file is a default file displayed by server in the application. In other words it's starting point for all other actions.
+**Simple response** is retured by servlet and developer can define what should be inside.
 
 ##### Flow
 The following flow takes place in this project:
