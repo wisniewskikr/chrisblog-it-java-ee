@@ -24,9 +24,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **asynchronous jaxrs** using **managedexecutorservice** in a **REST API Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to create **asynchronous jaxrs** using **CompletionStage** class in a **REST API Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Asynchronous Jax-Rs** means that API is handled in asynchronous way. It means that request-response thread is free and computation is done by other thread. When computation is done then request-response thread is resumed. In this example it is done by using **ManagedExecutorService** class.
+**Asynchronous Jax-Rs** means that API is handled in asynchronous way. It means that request-response thread is free and computation is done by other thread. When computation is done then request-response thread is resumed. In this example it is done by using **CompletionStage** class which is parent of **CompletableFuture** class.
 
 ##### Flow
 The following flow takes place in this project:
