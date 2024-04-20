@@ -24,9 +24,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **simple REST API Java** application using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
+The goal of this project is to present how to create **index** file in a **GUI JPA Java** application using **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-Application is deployed on **payara micro** in version 6.
+**Index** file is a default file displayed by server in the application. In other words it's starting point for all other actions.
 
 ##### Flow
 The following flow takes place in this project:
@@ -38,7 +38,7 @@ To launch this application please make sure that the **Preconditions** are met a
 
 ##### Technologies
 This project uses following technologies:
-* **Java EE 8** framework
+* **Java EE 9** framework
 
 
 PRECONDITIONS
