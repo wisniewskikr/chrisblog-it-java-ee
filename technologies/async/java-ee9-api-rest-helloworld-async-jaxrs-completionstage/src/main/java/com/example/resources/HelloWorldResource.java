@@ -2,15 +2,13 @@ package com.example.resources;
 
 import java.util.Collections;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
-
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionStage;
 import jakarta.annotation.Resource;
 import jakarta.enterprise.concurrent.ManagedExecutorService;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.container.AsyncResponse;
-import jakarta.ws.rs.container.Suspended;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
@@ -25,13 +23,8 @@ public class HelloWorldResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public void helloWorldAsync(@Suspended AsyncResponse asyncResponse) {
-
-        asyncResponse.setTimeout(10, TimeUnit.SECONDS);
-        asyncResponse.setTimeoutHandler(response -> response.resume(Response.status(Response.Status.SERVICE_UNAVAILABLE)));
-        
-        mes.execute(() -> asyncResponse.resume(helloWorld()));
-
+    public CompletionStage<Response> helloWorldAsync() {
+        return CompletableFuture.supplyAsync(this::helloWorld, mes);
     }
 
     public Response helloWorld() {
