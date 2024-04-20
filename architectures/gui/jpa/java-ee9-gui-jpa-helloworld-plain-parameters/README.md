@@ -8,8 +8,8 @@ USAGE COMMANDS
 Usage steps:
 1. In a command line tool create package with `mvn clean package`
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\gui.war --port 8080`
-1. In a http browser (e.g. Chrome) visit `http://localhost:8080/gui`
-   * Expected HTML page **Hello World!**
+1. In a http browser (e.g. Chrome) visit `http://localhost:8080/gui?name=Stranger`
+   * Expected HTML page **Hello World Stranger!**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -24,9 +24,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement simple **response** in a **plain GUI JPA Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to user **parameters** in a **plain GUI JPA Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Simple response** is retured by servlet and developer can define what should be inside.
+**Parameters** are values which an user can pass to an application through an URL. They started after sigh "?" and are separated by sing "&". They consist of "key=value". 
 
 ##### Flow
 The following flow takes place in this project:
