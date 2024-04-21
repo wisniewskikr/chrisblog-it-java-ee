@@ -24,7 +24,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **redirect** in a **plain GUI JPA Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to implement **redirect** in a **GUI HTML Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
 **Redirect** means that control is passed from one servlet to another servlet. An user is aware of it. An URL in a browser is changed to new one.
 
