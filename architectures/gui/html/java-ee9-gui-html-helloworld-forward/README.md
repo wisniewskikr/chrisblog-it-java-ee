@@ -24,7 +24,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **forward** in a **plain GUI JPA Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to implement **forward** in a **GUI HTML Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
 **Forward** means that control is passed from one servlet to another servlet. But user is not aware of it. URL in browser is not changed.
 
