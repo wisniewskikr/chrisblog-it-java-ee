@@ -24,7 +24,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to user **parameters** in a **plain GUI JPA Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to user **parameters** in a **GUI HTML Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
 **Parameters** are values which an user can pass to an application through an URL. They started after sigh "?" and are separated by sing "&". They consist of "key=value". 
 
