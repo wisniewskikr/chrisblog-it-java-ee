@@ -14,7 +14,7 @@ public class HelloWorldServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        String message = getServletConfig().getInitParameter("message");
+        String message = getServletContext().getInitParameter("message");
         resp.setContentType("text/html");
         resp.getWriter().println("<p>" + message + "</p>");
 
