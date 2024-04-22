@@ -4,7 +4,7 @@
         <title>Hello World!</title>
     </head>
     <body>
-        <form method="post" action="/gui/">
+        <form method="post" action="">
 
             <div>
                 <label for="name">Name:</label>
