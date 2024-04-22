@@ -9,8 +9,8 @@ Usage steps:
 1. In a command line tool create package with `mvn clean package`
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\gui.war --port 8080`
 1. In a http browser (e.g. Chrome) visit `http://localhost:8080/gui`
-1. I a http browser type **Stranger** as the name and click on **Submit** button
-   * Expected HTML page **Hello World Strager!**
+   * Expected first HTML page with the form. Type **Stranger** as the name and click on **Submit** button
+   * Expected second HTML page with message **Hello World Strager!**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -27,13 +27,15 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **form single** page in a **GUI JSP Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to implement **form multiple** pages in a **GUI JSP Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Form single** page means that user can send some data to the application using the form.
+**Form multiple** pages means that in the first page an user fills some form with data and after clicking on "Submit" button an user is redirected to the second page.
 
 ##### Flow
 The following flow takes place in this project:
-1. User via any browser sends request to application for a content.
+1. User via any browser sends request to application for a content of first page.
+1. Application returns the response with the first page. This response is presented to User via browser.
+1. User via any browser sends request to application for a content of second page.
 1. Application returns response with JSON containing message "Hello World"!. This response is presented to User via browser.
 
 ##### Launch
