@@ -4,9 +4,6 @@
         <title>Hello World!</title>
     </head>
     <body>
-        <div>${message}</div>
-        <div>
-            <a href="/gui/">Back</a>
-        </div>
+        <a href="helloworld">HelloWorld Page</a>
     </body>
 </html>
