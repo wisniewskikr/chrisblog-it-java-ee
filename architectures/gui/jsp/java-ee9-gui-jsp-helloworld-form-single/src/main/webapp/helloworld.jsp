@@ -4,6 +4,18 @@
         <title>Hello World!</title>
     </head>
     <body>
+        <form method="post" action="/gui/">
+
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"></input>
+            </div>
+
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
         <p>${message}</p>
     </body>
 </html>
