@@ -6,7 +6,7 @@
     <body>
         <div>${message}</div>
         <div>
-            <a href="/gui/">Back</a>
+            <a href="/gui">Back</a>
         </div>
     </body>
 </html>

@@ -4,6 +4,6 @@
         <title>Hello World!</title>
     </head>
     <body>
-        <a href="helloworld">HelloWorld Page</a>
+        <a href="/gui/helloworld">HelloWorld Page</a>
     </body>
 </html>
