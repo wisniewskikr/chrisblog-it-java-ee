@@ -24,9 +24,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to display content in simple **response** in a **GUI HTML Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to use **init param** in a **GUI HTML Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Content of response** is retured by servlet and developer can define what should be inside.
+**Init param** is some data available after application initialization.
 
 ##### Flow
 The following flow takes place in this project:
