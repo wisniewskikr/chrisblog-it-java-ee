@@ -9,7 +9,8 @@ Usage steps:
 1. In a command line tool create package with `mvn clean package`
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\gui.war --port 8080`
 1. In a http browser (e.g. Chrome) visit `http://localhost:8080/gui`
-   * Expected HTML page **Hello World!**
+1. I a http browser type **Stranger** as the name and click on **Submit** button
+   * Expected HTML page **Hello World Strager!**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -19,14 +20,16 @@ USAGE IMAGES
 
 ![My Image](readme-images/image-01.png)
 
+![My Image](readme-images/image-02.png)
+
 
 DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to display **plain simple** page in a **GUI JSP Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to implement **form single** page in a **GUI JSP Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Plain simple** page means plain HTML page where just message "Hello World!" is displayed.
+**Form single** page means that user can send some data to the application using the form.
 
 ##### Flow
 The following flow takes place in this project:
