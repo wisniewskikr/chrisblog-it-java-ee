@@ -5,7 +5,14 @@
     </head>
     <body>
         <p>
-            <% String result = (String)request.getAttribute("message"); %>
+            <%! 
+                String getRequestAttribute(HttpServletRequest request, String attributeName) {
+                    return (String)request.getAttribute(attributeName);
+                }
+            %>
+            <% 
+                String result = getRequestAttribute(request, "message");
+            %>
             <%= result %>
         </p>
     </body>
