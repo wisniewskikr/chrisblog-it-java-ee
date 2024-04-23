@@ -24,9 +24,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to use **JSP expression tags** in a **GUI JSP Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to use **JSP scriptlet** in a **GUI JSP Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**JSP expression tag** enables including Java code in JSP page. In this way a developer has direct access to Java objects in JSP pages.
+**JSP scriptlet** enables including multiple lines of Java code in JSP page. In this way a developer has direct access to Java objects in JSP pages.
 
 ##### Flow
 The following flow takes place in this project:
