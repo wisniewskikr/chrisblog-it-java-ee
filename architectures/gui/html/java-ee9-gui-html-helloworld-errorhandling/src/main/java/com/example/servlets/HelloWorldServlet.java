@@ -14,8 +14,7 @@ public class HelloWorldServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        req.setAttribute("message", "Hello World!");
-        getServletContext().getRequestDispatcher("/helloworld.jsp").forward(req, resp);
+        throw new NullPointerException();
 
     }    
     
