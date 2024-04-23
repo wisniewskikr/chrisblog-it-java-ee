@@ -4,6 +4,8 @@
         <title>Hello World!</title>
     </head>
     <body>
-        <p>${message}</p>
+        <p>
+            <%= request.getAttribute("message") %>
+        </p>
     </body>
 </html>
