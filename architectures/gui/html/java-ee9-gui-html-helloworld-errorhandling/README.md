@@ -9,8 +9,11 @@ Usage steps:
 1. In a command line tool create package with `mvn clean package`
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\gui.war --port 8080`
 1. In a http browser (e.g. Chrome) visit `http://localhost:8080/gui`
-   * Expected **Init** page with the link **Hello World Page**. Click on the link.
-   * Expoected **Hello World** page with the message **Hello World!**
+   * Expected **404** page. Please click on the link **Back**.
+   * Expected **Init** page. Please click on the link **Error 500**.
+   * Expected **500** page. Please click on the link **Back**.
+   * Expected **Init** page. Please click on the link **Error Custom**.
+   * Expected **Error Custom** page.
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -22,14 +25,20 @@ USAGE IMAGES
 
 ![My Image](readme-images/image-02.png)
 
+![My Image](readme-images/image-03.png)
+
+![My Image](readme-images/image-04.png)
+
+![My Image](readme-images/image-05.png)
+
 
 DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to display **plain multiple** pages in a **GUI JSP Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to implement **error handling** in a **GUI JSP Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Plain multiple** pages means that first plain HTML page with link to second HTML page is displayed. After clicking on this link an user is redirected to the second page.
+**Error handling** means that custom error page is displayed when specific error occurs in the application. Error handling is configured in **web.xml** file.
 
 ##### Flow
 The following flow takes place in this project:
