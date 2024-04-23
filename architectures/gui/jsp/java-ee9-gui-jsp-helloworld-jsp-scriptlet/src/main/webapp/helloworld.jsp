@@ -5,7 +5,8 @@
     </head>
     <body>
         <p>
-            <%= request.getAttribute("message") %>
+            <% String result = (String)request.getAttribute("message"); %>
+            <%= result %>
         </p>
     </body>
 </html>
