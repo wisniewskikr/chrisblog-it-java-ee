@@ -24,9 +24,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to use **JSP directive tag** type **page** in a **GUI JSP Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to use **JSP directive tag** type **include** in a **GUI JSP Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**JSP directive tag type page** enables page configuration. For instance developer can set page charset, content type etc. Developer can also import some Java class into JSP.
+**JSP directive tag type include** enables including one JSP page inside other JSP page.
 
 ##### Flow
 The following flow takes place in this project:
