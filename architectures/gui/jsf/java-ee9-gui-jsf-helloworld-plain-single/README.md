@@ -24,9 +24,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **index** file in a **plain GUI JSF Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to implement **signle plain** page in a **GUI JSF Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Index** file is a default file displayed by server in the application. In other words it's starting point for all other actions.
+**Single plain** page means that this application contains only one page which displays "Hello World" message.
 
 ##### Flow
 The following flow takes place in this project:
