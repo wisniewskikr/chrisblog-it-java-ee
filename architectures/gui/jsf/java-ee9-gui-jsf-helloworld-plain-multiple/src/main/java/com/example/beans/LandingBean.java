@@ -5,16 +5,12 @@ import java.io.Serializable;
 import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Named;
 
-@Named("helloWorldBean")
+@Named("landingBean")
 @ViewScoped
-public class HelloWorldBean implements Serializable {
+public class LandingBean implements Serializable {
     
-    public String getMessage() {
-        return "Hello World!";
-    }
-
     public String getText() {
-        return "Back";
+        return "Please click here";
     }
 
 }
