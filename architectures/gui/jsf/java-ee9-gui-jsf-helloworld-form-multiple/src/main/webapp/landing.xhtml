@@ -13,6 +13,18 @@
     </title>
 </h:head>
 <h:body>
-    <h:link outcome="/helloworld.xhtml" value="#{landingBean.text}" />
+    <f:view>
+        
+    <h:form>
+            <div>
+                <h:outputLabel for="name" value="#{landingBean.label}"/>
+                <h:inputText id="name" value="#{helloWorldBean.name}"></h:inputText>
+            </div>
+            <div>
+                <h:commandButton value="Submit" action="helloworld"></h:commandButton>
+            </div>
+        </h:form>
+        
+    </f:view>
 </h:body>
 </html>

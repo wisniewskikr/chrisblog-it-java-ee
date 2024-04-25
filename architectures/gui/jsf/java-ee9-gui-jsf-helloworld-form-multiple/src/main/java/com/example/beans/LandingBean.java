@@ -9,8 +9,8 @@ import jakarta.inject.Named;
 @ViewScoped
 public class LandingBean implements Serializable {
     
-    public String getText() {
-        return "Please click here";
+    public String getLabel() {
+        return "Please tell me your name:";
     }
 
 }
