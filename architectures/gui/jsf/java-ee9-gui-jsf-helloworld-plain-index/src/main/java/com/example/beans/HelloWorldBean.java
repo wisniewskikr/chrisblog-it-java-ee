@@ -1,11 +1,13 @@
 package com.example.beans;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import java.io.Serializable;
 
-@ManagedBean(name="helloWorldBean")
+import jakarta.faces.view.ViewScoped;
+import jakarta.inject.Named;
+
+@Named("helloWorldBean")
 @ViewScoped
-public class HelloWorldBean {
+public class HelloWorldBean implements Serializable {
     
     public String getMessage() {
         return "Hello World!";
