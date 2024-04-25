@@ -13,6 +13,22 @@
     </title>
 </h:head>
 <h:body>
-    <h:outputText value="#{helloWorldBean.message}" />
+    <f:view>
+        
+    <h:form>
+            <div>
+                <h:outputLabel for="name" value="Please tell me your name:"/>
+                <h:inputText id="name" value="#{helloWorldBean.name}"></h:inputText>
+            </div>
+            <div>
+                <h:commandButton value="Submit" action="helloworld"></h:commandButton>
+            </div>
+        </h:form>
+
+        <div>
+            <h:outputText id="text" value="${helloWorldBean.message}"/>
+        </div>
+        
+    </f:view>
 </h:body>
 </html>
