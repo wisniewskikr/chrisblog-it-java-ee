@@ -12,7 +12,7 @@ public class HelloWorldBean implements Serializable {
     private String name;
 
     public String getName() {
-        return name;
+        return null;
     }
 
     public void setName(String name) {
@@ -25,7 +25,6 @@ public class HelloWorldBean implements Serializable {
 
         if (name != null) {
             message = "Hello World " + name + "!";
-            name = null;
         }        
 
         return message;

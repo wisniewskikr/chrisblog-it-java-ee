@@ -9,7 +9,8 @@ Usage steps:
 1. In a command line tool create package with `mvn clean package`
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\gui.war --port 8080`
 1. In a http browser (e.g. Chrome) visit `http://localhost:8080/gui`
-   * Expected HTML page **Hello World!**
+   * Expected **Hello World** page with form. Please type "Stranger" as the **name** and click **Submit** button
+   * Expected **Hello World** page with **message** "Hello World Stranger!"
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -19,19 +20,23 @@ USAGE IMAGES
 
 ![My Image](readme-images/image-01.png)
 
+![My Image](readme-images/image-02.png)
+
 
 DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **signle plain** page in a **GUI JSF Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
+The goal of this project is to present how to implement **signle form** page in a **GUI JSF Java** application with usage **Java EE 9** framework. Application is deployed on **payara micro** in version 6.
 
-**Single plain** page means that this application contains only one page which displays "Hello World" message.
+**Single form** page means that this application contains only one page with form inside. After filling the form and clicking Submit button a Hello World message is displayed.
 
 ##### Flow
 The following flow takes place in this project:
-1. User via any browser sends request to application for a content.
-1. Application returns response with JSON containing message "Hello World"!. This response is presented to User via browser.
+1. User via any browser sends request to application for a content of Hello World page.
+1. Application returns response with Hello World. This response is presented to User via browser.
+1. User via any browser fills the form and sends request to application for a content of Hello World page.
+1. Application returns response with Hello World. This response is presented to User via browser.h
 
 ##### Launch
 To launch this application please make sure that the **Preconditions** are met and then follow instructions from **Usage** section.
