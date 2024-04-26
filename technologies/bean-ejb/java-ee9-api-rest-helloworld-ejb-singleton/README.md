@@ -24,12 +24,12 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **EJB** with scope **Stateful** in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
+The goal of this project is to present how to implement **EJB** with scope **Singleton** in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
 ##### Terminology
 Terminology explanation:
 * **EJB**: Enterprise Java Bean is an element of Java EE. It's a Java class handled by server which takes care about injecting, transactions, pooling etc.
-* **Stateful**: EJB with this scope is created by application server and connected with HTTP session. So you can store some data here and these data will be available during the session. No other user will have access to this bean
+* **Singleton**: EJB with this scope is created by application server only once for whole application. So all users use the same EJB
 * **API**: Application Programming Interface is designed for communication between machines
 * **REST**: it's communication HTTP protocol with some set of rules
 * **Java EE 9**: it's Java framework which speeds up development
