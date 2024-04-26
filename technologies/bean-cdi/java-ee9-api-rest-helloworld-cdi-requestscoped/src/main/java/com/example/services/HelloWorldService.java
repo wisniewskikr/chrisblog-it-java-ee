@@ -1,11 +1,9 @@
 package com.example.services;
 
-import java.io.Serializable;
+import jakarta.enterprise.context.RequestScoped;
 
-import jakarta.enterprise.context.SessionScoped;
-
-@SessionScoped
-public class HelloWorldService implements Serializable {
+@RequestScoped
+public class HelloWorldService {
     
     public String getMessage() {
         return "Hello World!";
