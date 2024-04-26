@@ -3,8 +3,6 @@ package com.example.resources;
 import java.util.Collections;
 import java.util.Map;
 
-import com.example.services.HelloWorldService;
-
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -18,17 +16,17 @@ import jakarta.ws.rs.core.Response;
 @Path("hello")
 public class HelloWorldResource {
 
-    private HelloWorldService helloWorldService;
+    private String message;
 
     @Inject
-    public HelloWorldResource(HelloWorldService helloWorldService) {
-        this.helloWorldService = helloWorldService;
+    public HelloWorldResource(String message) {
+        this.message = message;
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response helloWorld() {
-        Map<String, String> response = Collections.singletonMap("message", helloWorldService.getMessage());
+        Map<String, String> response = Collections.singletonMap("message", message);
         return Response.ok(response).build();
     }
     
