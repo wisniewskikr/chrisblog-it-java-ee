@@ -24,36 +24,21 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create **simple REST API Java** application using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
+The goal of this project is to present how to implement **bean EJB** in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
-Application is deployed on **payara micro** in version 6.
-
-##### Flow
-The following flow takes place in this project:
-1. User via any browser sends request to application for a content.
-1. Application returns response with JSON containing message "Hello World"!. This response is presented to User via browser.
+##### Terminology
+Terminology explanation:
+* **Bean EJB**: Enterprise Java Bean is an element of Java EE. It's a Java class handled by server which takes care about injecting, transactions, pooling etc.
+* **API**: Application Programming Interface is designed for communication between machines
+* **REST**: it's communication HTTP protocol with some set of rules
+* **Java EE 9**: it's Java framework which speeds up development
+* **Payara Micro**: it's server with implementation of Java EE
+* **Java**: object-oriented programming language
+* **Maven**: tool for build automation. For instance it takes care of needed dependencies
+* **Git**: tool for distributed version control. It is also used for sharing a code
 
 ##### Launch
 To launch this application please make sure that the **Preconditions** are met and then follow instructions from **Usage** section.
-
-##### Technologies
-This project uses following technologies:
-* **Java EE 8** framework
-
-
-PRECONDITIONS
--------------
-
-##### Preconditions - Tools
-* Installed **Operating System** (tested on Windows 10)
-* Installed **Java** (tested on version 11.0.16.1). Tool details: `https://docs.google.com/document/d/119VYxF8JIZIUSk7JjwEPNX1RVjHBGbXHBKuK_1ytJg4/edit?usp=sharing`
-* Installed **Maven** (tested on version 3.8.5). Tool details: `https://docs.google.com/document/d/1cfIMcqkWlobUfVfTLQp7ixqEcOtoTR8X6OGo3cU4maw/edit?usp=sharing`
-* Installed **Git** (tested on version 2.33.0.windows.2). Tool details: `https://docs.google.com/document/d/1Iyxy5DYfsrEZK5fxZJnYy5a1saARxd5LyMEscJKSHn0/edit?usp=sharing`
-
-
-##### Preconditions - Actions
-* **Download** source code using Git 
-* Open any **Command Line** (for instance "Windonw PowerShell" on Windows OS) tool on **project's folder**.
 
 
 ADDITIONAL INFO
