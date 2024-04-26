@@ -24,12 +24,12 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **@Produces and @Named** annotations in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
+The goal of this project is to present how to implement **@Produces and @Qualifier** annotations in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
 ##### Terminology
 Terminology explanation:
 * **@Produces**: this annotation enables injecting values insead of classes. By default in Java EE developer can inject beans - Java classes. But this annotation enables injecting values like Strings, Enums etc.
-* **@Named**: by default @Produces annotation finds method to inject by returned type. But there is a problem if two or more methods annotated by @Produeces return the same type (e.g. String). Annotation @Named resolves this issue: developer can give unique name for every of these method and in this way identify them
+* **@Qualifier**: by default @Produces annotation finds method to inject by returned type. But there is a problem if two or more methods annotated by @Produeces return the same type (e.g. String). Annotation @Named resolves this issue but developer can make a typo in the name. That's why it's sometimes better to create your own annotation based on @Qualifier annotation. This new annotation works in the same way as @Named annotation but you don't have to put any name - name is included in the name of your annotation
 * **API**: Application Programming Interface is designed for communication between machines
 * **REST**: it's communication HTTP protocol with some set of rules
 * **Java EE 9**: it's Java framework which speeds up development
