@@ -1,8 +1,8 @@
 package com.example.services;
 
-import jakarta.ejb.Stateless;
+import jakarta.ejb.Stateful;
 
-@Stateless
+@Stateful
 public class HelloWorldService {
     
     public String getMessage() {
