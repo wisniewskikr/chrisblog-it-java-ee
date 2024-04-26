@@ -24,11 +24,11 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **bean CDI** in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
+The goal of this project is to present how to implement **@Produces** annotation in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
 ##### Terminology
 Terminology explanation:
-* **Bean CDI**: Context and Dependency Injection is a part of Java EE. It's a Java class which can be injected by Java EE server. But by default, opposite to Bean EJB, it doesn't handle such elements like transactions, pooling etc. But developer can add it using specific annotations (e.g. @Transactional etc.)
+* **@Produces**: this annotation enables injecting values insead of classes. By default in Java EE developer can inject beans - Java classes. But this annotation enables injecting values like Strings, Enums etc.
 * **API**: Application Programming Interface is designed for communication between machines
 * **REST**: it's communication HTTP protocol with some set of rules
 * **Java EE 9**: it's Java framework which speeds up development
