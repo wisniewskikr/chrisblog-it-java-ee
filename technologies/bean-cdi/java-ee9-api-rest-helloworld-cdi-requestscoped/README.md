@@ -24,12 +24,12 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **CDI** bean with scope **SessionScoped** in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
+The goal of this project is to present how to implement **CDI** bean with scope **RequestScoped** in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
 ##### Terminology
 Terminology explanation:
 * **CDI**: Context and Dependency Injection is a part of Java EE. It's a Java class which can be injected by Java EE server. But by default, opposite to Bean EJB, it doesn't handle such elements like transactions, pooling etc. But developer can add it using specific annotations (e.g. @Transactional etc.)
-* **SessionScoped**: bean in this scope is created once for whole HTTP session. You can store some data there
+* **RequestScoped**: bean in this scope is created once for HTTP request
 * **API**: Application Programming Interface is designed for communication between machines
 * **REST**: it's communication HTTP protocol with some set of rules
 * **Java EE 9**: it's Java framework which speeds up development
