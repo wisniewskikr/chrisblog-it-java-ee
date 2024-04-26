@@ -3,8 +3,9 @@ package com.example.resources;
 import java.util.Collections;
 import java.util.Map;
 
+import com.example.annotations.Message;
+
 import jakarta.inject.Inject;
-import jakarta.inject.Named;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
@@ -18,7 +19,7 @@ import jakarta.ws.rs.core.Response;
 public class HelloWorldResource {
 
     @Inject
-    @Named("message")
+    @Message
     private String message;
 
     @GET
