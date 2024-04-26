@@ -24,11 +24,11 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **bean EJB** in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
+The goal of this project is to present how to implement **bean CDI** in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
 ##### Terminology
 Terminology explanation:
-* **Bean EJB**: Enterprise Java Bean is an element of Java EE. It's a Java class handled by server which takes care about injecting, transactions, pooling etc.
+* **Bean CDI**: Context and Dependency Injection is a part of Java EE. It's a Java class which can be injected by Java EE server. But by default, opposite to Bean EJB, it doesn't handle such elements like transactions, pooling etc. But developer can add it using specific annotations (e.g. @Transactional etc.)
 * **API**: Application Programming Interface is designed for communication between machines
 * **REST**: it's communication HTTP protocol with some set of rules
 * **Java EE 9**: it's Java framework which speeds up development
