@@ -8,7 +8,8 @@ USAGE COMMANDS
 Usage steps:
 1. In a command line tool create package with `mvn clean package`
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\rest.war --port 8080`
-1. In a http browser (e.g. Chrome) visit `http://localhost:8080/rest/api/hello`
+1. In a http client (e.g. Postman) using **POST** method visit `http://localhost:8080/rest/api/hello`
+   * Use body JSON **{"message": "Hello World!"}**
    * Expected JSON **{"message": "Hello World!"}**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
@@ -24,12 +25,12 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **response** with status **200 (ok)** in a **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
+The goal of this project is to present how to implement **response** with **@Consumes** annotation in a **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
 ##### Terminology
 Terminology explanation:
 * **Response**: it's object returned to the user
-* **Status 200**: it's status of response that says that everything is ok
+* **@Consumes**: this annotation enables setting type which should be consumed. It means type which is sent from user. For example it can be JSON
 * **API**: Application Programming Interface is designed for communication between machines
 * **REST**: it's communication HTTP protocol with some set of rules
 * **Java EE 9**: it's Java framework which speeds up development
