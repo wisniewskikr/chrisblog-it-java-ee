@@ -1,10 +1,9 @@
 package com.example.resources;
 
-import com.example.HelloWorldModel;
+import jakarta.json.Json;
+import jakarta.json.JsonObject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 /**
@@ -14,9 +13,14 @@ import jakarta.ws.rs.core.Response;
 public class HelloWorldResource {
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public Response helloWorld() {
-        return Response.ok(new HelloWorldModel("Hello World!")).build();
+
+        JsonObject helloWorldJson = Json.createObjectBuilder()
+            .add("message", "Hello World!")
+            .build();
+
+        return Response.ok(helloWorldJson).build();
+
     }
     
 }
