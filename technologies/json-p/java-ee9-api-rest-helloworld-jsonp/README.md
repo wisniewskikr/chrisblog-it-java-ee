@@ -24,11 +24,11 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to use **JSON-B** approach in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
+The goal of this project is to present how to use **JSON-P** approach in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
 ##### Terminology
 Terminology explanation:
-* **JSON-B**: JSON Binding is a default Java EE technology for binding Java POJO classes into JSON. We can use annotations in POJO to configure JSON
+* **JSON-P**: JSON with Padding is a Java EE technology for binding Java POJO classes into JSON. We can use classes like JsonObject, JsonArray etc. to comletely configure our JSON
 * **API**: Application Programming Interface is designed for communication between machines
 * **REST**: it's communication HTTP protocol with some set of rules
 * **Java EE 9**: it's Java framework which speeds up development
