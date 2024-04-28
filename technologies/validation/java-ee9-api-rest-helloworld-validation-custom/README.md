@@ -25,11 +25,11 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **validation** in a **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
+The goal of this project is to present how to implement **custom validation** in a **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
 ##### Terminology
 Terminology explanation:
-* **Validation**: it means that REST API request is validated - it has to fullfil some rules. In this example request body can not be null and "message" also can not be null
+* **Custom Validation**: it means that REST API request is validated by some custom annotation - it has to fullfil some rules. To create custom validation we have to create custom annotation and connect it with custom validator
 * **API**: Application Programming Interface is designed for communication between machines
 * **REST**: it's communication HTTP protocol with some set of rules
 * **Java EE 9**: it's Java framework which speeds up development
