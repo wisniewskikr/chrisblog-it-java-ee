@@ -1,10 +1,10 @@
 package com.example.models;
 
-import jakarta.validation.constraints.NotNull;
+import com.example.validation.annotations.MessageValidationAnnotation;
 
 public class HelloWorldModel {
     
-    @NotNull
+    @MessageValidationAnnotation
     private String message;
 
     public String getMessage() {
