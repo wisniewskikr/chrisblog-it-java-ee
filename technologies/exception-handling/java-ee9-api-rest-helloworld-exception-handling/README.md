@@ -8,8 +8,8 @@ USAGE COMMANDS
 Usage steps:
 1. In a command line tool create package with `mvn clean package`
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\rest.war --port 8080`
-1. In a http browser (e.g. Chrome) visit `http://localhost:8080/rest/api/hello`
-   * Expected JSON **{"message": "Hello World!"}**
+1. In a http client (e.g. Postman) using **GET** method visit `http://localhost:8080/rest/api/hello`
+   * Expected message **Hello World from Exception!**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -24,11 +24,11 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **@Produces** annotation in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
+The goal of this project is to present how to implement **exception handling** in **REST API** application using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
 ##### Terminology
 Terminology explanation:
-* **@Produces**: this annotation enables injecting values insead of classes. By default in Java EE developer can inject beans - Java classes. But this annotation enables injecting values like Strings, Enums etc.
+* **Exception Handling**: it means that we can handle exceptions in a custom way. For this interface ExceptionMapper is used 
 * **API**: Application Programming Interface is designed for communication between machines
 * **REST**: it's communication HTTP protocol with some set of rules
 * **Java EE 9**: it's Java framework which speeds up development
