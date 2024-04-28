@@ -5,6 +5,8 @@ import java.util.Map;
 
 import com.example.models.HelloWorldModel;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
@@ -21,7 +23,7 @@ public class HelloWorldResource {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response helloWorld(HelloWorldModel model) {
+    public Response helloWorld(@Valid @NotNull HelloWorldModel model) {
         Map<String, String> response = Collections.singletonMap("message", model.getMessage());
         return Response.ok(response).build();
     }
