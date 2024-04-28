@@ -3,6 +3,8 @@ package com.example.resources;
 import java.util.Collections;
 import java.util.Map;
 
+import com.example.exceptions.HelloWorldException;
+
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -26,6 +28,11 @@ public class HelloWorldResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response helloWorld() {
+
+        if (true) {
+            throw new HelloWorldException("Hello World by Exception!");
+        }
+
         Map<String, String> response = Collections.singletonMap("message", message);
         return Response.ok(response).build();
     }
