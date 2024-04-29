@@ -1,10 +1,9 @@
 package com.example.entities;
 
-import com.example.enums.MessageEnum;
+import com.example.embeddeds.MessageEmbedded;
 
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -14,8 +13,8 @@ public class HelloWorldEntity {
 
     @Id
     private Long id;
-    @Enumerated(EnumType.STRING)
-    private MessageEnum message;
+    @Embedded
+    private MessageEmbedded messageEmbedded;
 
     public Long getId() {
         return id;
@@ -25,12 +24,12 @@ public class HelloWorldEntity {
         this.id = id;
     }
 
-    public MessageEnum getMessage() {
-        return message;
+    public MessageEmbedded getMessageEmbedded() {
+        return messageEmbedded;
     }
 
-    public void setMessage(MessageEnum message) {
-        this.message = message;
-    }       
+    public void setMessageEmbedded(MessageEmbedded messageEmbedded) {
+        this.messageEmbedded = messageEmbedded;
+    }               
     
 }
