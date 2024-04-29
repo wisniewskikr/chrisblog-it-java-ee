@@ -1,10 +1,10 @@
 package com.example.entities;
 
-import com.example.embeddeds.MessageEmbedded;
-
-import jakarta.persistence.Embedded;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,8 +13,10 @@ public class HelloWorldEntity {
 
     @Id
     private Long id;
-    @Embedded
-    private MessageEmbedded messageEmbedded;
+    
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "message_id", referencedColumnName = "id")
+    private MessageEntity messageEntity;
 
     public Long getId() {
         return id;
@@ -24,12 +26,12 @@ public class HelloWorldEntity {
         this.id = id;
     }
 
-    public MessageEmbedded getMessageEmbedded() {
-        return messageEmbedded;
+    public MessageEntity getMessageEntity() {
+        return messageEntity;
     }
 
-    public void setMessageEmbedded(MessageEmbedded messageEmbedded) {
-        this.messageEmbedded = messageEmbedded;
-    }               
+    public void setMessageEntity(MessageEntity messageEntity) {
+        this.messageEntity = messageEntity;
+    }                 
     
 }
