@@ -9,7 +9,7 @@ Usage steps:
 1. In a command line tool create package with `mvn clean package`
 1. In a command line tool start application with `java -jar pm.jar --deploy .\target\rest.war --port 8080`
 1. In a http browser (e.g. Chrome) visit `http://localhost:8080/rest/api/hello`
-   * Expected JSON **{"message": "Hello World!"}**
+   * Expected JSON **{"message": "HELLO_WORLD"}**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -24,38 +24,22 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to init data in **REST API Java** application with **H2 embedded database** using **Java EE 9** framework. This application returns JSON with the key "message" and the value **Hello World!** as the result of GET HTTP method. 
+The goal of this project is to present how to use **@Enumerated** annotation in a **REST API** application related to **embedded H2** database using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
-Application is deployed on **payara micro** in version 6.
-
-##### Flow
-The following flow takes place in this project:
-1. User via any browser sends request to application for a content.
-1. Application reads message from H2 database.
-1. Application returns response with JSON containing message "Hello World"!. This response is presented to User via browser.
+##### Terminology
+Terminology explanation:
+* **@Enumerated**: this annotation enables including Enums into Entities
+* **Embedded H2**: this database starts together with an application. It means that we don't have to configure database separetly
+* **API**: Application Programming Interface is designed for communication between machines
+* **REST**: it's communication HTTP protocol with some set of rules
+* **Java EE 9**: it's Java framework which speeds up development
+* **Payara Micro**: it's server with implementation of Java EE
+* **Java**: object-oriented programming language
+* **Maven**: tool for build automation. For instance it takes care of needed dependencies
+* **Git**: tool for distributed version control. It is also used for sharing a code
 
 ##### Launch
 To launch this application please make sure that the **Preconditions** are met and then follow instructions from **Usage** section.
-
-##### Technologies
-This project uses following technologies:
-* **Java EE 9** framework
-* **H2** embedded database
-
-
-PRECONDITIONS
--------------
-
-##### Preconditions - Tools
-* Installed **Operating System** (tested on Windows 10)
-* Installed **Java** (tested on version 21.0.2). Tool details: `https://docs.google.com/document/d/119VYxF8JIZIUSk7JjwEPNX1RVjHBGbXHBKuK_1ytJg4/edit?usp=sharing`
-* Installed **Maven** (tested on version 3.9.6). Tool details: `https://docs.google.com/document/d/1cfIMcqkWlobUfVfTLQp7ixqEcOtoTR8X6OGo3cU4maw/edit?usp=sharing`
-* Installed **Git** (tested on version 2.43.0.windows.2). Tool details: `https://docs.google.com/document/d/1Iyxy5DYfsrEZK5fxZJnYy5a1saARxd5LyMEscJKSHn0/edit?usp=sharing`
-
-
-##### Preconditions - Actions
-* **Download** source code using Git 
-* Open any **Command Line** (for instance "Windonw PowerShell" on Windows OS) tool on **project's folder**.
 
 
 ADDITIONAL INFO
