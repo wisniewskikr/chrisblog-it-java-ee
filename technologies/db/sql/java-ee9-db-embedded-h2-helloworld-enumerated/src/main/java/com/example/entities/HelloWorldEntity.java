@@ -1,6 +1,10 @@
 package com.example.entities;
 
+import com.example.enums.MessageEnum;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -10,13 +14,8 @@ public class HelloWorldEntity {
 
     @Id
     private Long id;
-    private String message;
-
-    public HelloWorldEntity() {}
-
-    public HelloWorldEntity(String message) {
-        this.message = message;
-    }
+    @Enumerated(EnumType.STRING)
+    private MessageEnum message;
 
     public Long getId() {
         return id;
@@ -26,12 +25,12 @@ public class HelloWorldEntity {
         this.id = id;
     }
 
-    public String getMessage() {
+    public MessageEnum getMessage() {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setMessage(MessageEnum message) {
         this.message = message;
-    }    
+    }       
     
 }

@@ -32,7 +32,7 @@ public class HelloWorldResource {
 
         HelloWorldEntity helloWorld = helloWorldService.load(1L);
         
-        Map<String, String> response = Collections.singletonMap("message", helloWorld.getMessage());
+        Map<String, String> response = Collections.singletonMap("message", helloWorld.getMessage().name());
         return Response.ok(response).build();
 
     }
