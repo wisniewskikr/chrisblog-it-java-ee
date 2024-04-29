@@ -11,7 +11,9 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 import com.example.entities.HelloWorldEntity;
+import com.example.entities.MessageEntity;
 import com.example.services.HelloWorldService;
+import com.example.services.MessageService;
 
 /**
  * The REST resource implementation class.
@@ -20,17 +22,21 @@ import com.example.services.HelloWorldService;
 public class HelloWorldResource {
 
     private HelloWorldService helloWorldService;
+
+    private MessageService messageService;
     
     @Inject
-    public HelloWorldResource(HelloWorldService helloWorldService) {
+    public HelloWorldResource(HelloWorldService helloWorldService, MessageService messageService) {
         this.helloWorldService = helloWorldService;
+        this.messageService = messageService;
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response helloWorld() {
 
-        HelloWorldEntity helloWorld = helloWorldService.load(1L);
+        MessageEntity message = messageService.load(1L);
+        HelloWorldEntity helloWorld = helloWorldService.load(message.getHelloWorldEntity().getId());
         
         Map<String, String> response = Collections.singletonMap("message", helloWorld.getMessageEntity().getMessage());
         return Response.ok(response).build();
