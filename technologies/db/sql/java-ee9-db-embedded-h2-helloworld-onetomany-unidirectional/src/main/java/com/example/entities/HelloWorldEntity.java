@@ -1,10 +1,14 @@
 package com.example.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,9 +18,9 @@ public class HelloWorldEntity {
     @Id
     private Long id;
     
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "message_id", referencedColumnName = "id")
-    private MessageEntity messageEntity;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "helloId", nullable = false)
+    private Set<MessageEntity> messages = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -26,12 +30,12 @@ public class HelloWorldEntity {
         this.id = id;
     }
 
-    public MessageEntity getMessageEntity() {
-        return messageEntity;
+    public Set<MessageEntity> getMessages() {
+        return messages;
     }
 
-    public void setMessageEntity(MessageEntity messageEntity) {
-        this.messageEntity = messageEntity;
-    }                 
+    public void setMessages(Set<MessageEntity> messages) {
+        this.messages = messages;
+    }                    
     
 }

@@ -31,8 +31,9 @@ public class HelloWorldResource {
     public Response helloWorld() {
 
         HelloWorldEntity helloWorld = helloWorldService.load(1L);
+        String message = helloWorld.getMessages().iterator().next().getMessage();
         
-        Map<String, String> response = Collections.singletonMap("message", helloWorld.getMessageEntity().getMessage());
+        Map<String, String> response = Collections.singletonMap("message", message);
         return Response.ok(response).build();
 
     }
