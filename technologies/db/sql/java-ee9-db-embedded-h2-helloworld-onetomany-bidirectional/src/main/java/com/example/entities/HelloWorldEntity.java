@@ -5,9 +5,7 @@ import java.util.Set;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -18,8 +16,7 @@ public class HelloWorldEntity {
     @Id
     private Long id;
     
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "helloId", nullable = false)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="helloWorldEntity")
     private Set<MessageEntity> messages = new HashSet<>();
 
     public Long getId() {
