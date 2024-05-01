@@ -24,11 +24,11 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to use **bidirectional @OneToMany** annotation in a **REST API** application related to **embedded H2** database using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
+The goal of this project is to present how to use **bidirectional @ManyToMany** annotation in a **REST API** application related to **embedded H2** database using **Java** programming language and **Java EE 9** framework. Application is deployed on a server **payara micro** in version 6.
 
 ##### Terminology
 Terminology explanation:
-* **Bidirectional @OneToMany**: this annotation enables connecting two entities in relation one to many - one first entity is related to many second entities. Bidirectional means that we can start from first entity to get second entities and oppisite way
+* **Bidirectional @ManyToMany**: this annotation enables connecting entities in relation many to many - many first entities is related to many second entities. Bidirectional means that we can start from first entity to get second entities and oppisite way
 * **Embedded H2**: this database starts together with an application. It means that we don't have to configure database separetly
 * **API**: Application Programming Interface is designed for communication between machines
 * **REST**: it's communication HTTP protocol with some set of rules
