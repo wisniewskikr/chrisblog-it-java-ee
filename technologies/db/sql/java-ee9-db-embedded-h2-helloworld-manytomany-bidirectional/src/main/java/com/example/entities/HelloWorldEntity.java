@@ -3,10 +3,11 @@ package com.example.entities;
 import java.util.HashSet;
 import java.util.Set;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,7 +17,11 @@ public class HelloWorldEntity {
     @Id
     private Long id;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="helloWorldEntity")
+    @ManyToMany
+    @JoinTable(
+        name = "hello_message", 
+        joinColumns = @JoinColumn(name = "helloworld_id"), 
+        inverseJoinColumns = @JoinColumn(name = "message_id"))
     private Set<MessageEntity> messages = new HashSet<>();
 
     public Long getId() {
