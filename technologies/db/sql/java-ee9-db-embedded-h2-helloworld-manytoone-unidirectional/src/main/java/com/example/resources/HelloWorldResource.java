@@ -34,12 +34,11 @@ public class HelloWorldResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response helloWorld() {
-
-        MessageEntity messageEntity = messageService.load(1L);
-        HelloWorldEntity helloWorld = helloWorldService.load(messageEntity.getHelloWorldEntity().getId());
-        String message = helloWorld.getMessages().iterator().next().getMessage();
         
-        Map<String, String> response = Collections.singletonMap("message", message);
+        HelloWorldEntity helloWorld = helloWorldService.load(1L);
+        MessageEntity messageEntity = messageService.load(helloWorld.getMessageEntity().getId());
+        
+        Map<String, String> response = Collections.singletonMap("message", messageEntity.getMessage());
         return Response.ok(response).build();
 
     }
