@@ -11,7 +11,6 @@ public class MessageEntity {
     @Id
     private Long id;
     private String message;
-    private Long helloId;
     
     public String getMessage() {
         return message;
@@ -28,13 +27,5 @@ public class MessageEntity {
     public void setId(Long id) {
         this.id = id;
     }
-
-    public Long getHelloId() {
-        return helloId;
-    }
-
-    public void setHelloId(Long helloId) {
-        this.helloId = helloId;
-    }         
 
 }

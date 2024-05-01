@@ -19,7 +19,7 @@ public class HelloWorldEntity {
     private Long id;
     
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "helloId", nullable = false)
+    @JoinColumn(name = "helloworld_id", nullable = false)
     private Set<MessageEntity> messages = new HashSet<>();
 
     public Long getId() {
