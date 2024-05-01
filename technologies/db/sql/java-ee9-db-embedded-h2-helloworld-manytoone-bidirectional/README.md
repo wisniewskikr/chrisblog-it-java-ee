@@ -28,7 +28,7 @@ The goal of this project is to present how to use **bidirectional @ManyToOne** a
 
 ##### Terminology
 Terminology explanation:
-* **Bidirectional @OneToMany**: this annotation enables connecting two entities in relation many to one - many first entities is related to one second entity. Bidirectional means that we can start from first entity to get second entities and oppisite way
+* **Bidirectional @ManyToOne**: this annotation enables connecting two entities in relation many to one - many first entities is related to one second entity. Bidirectional means that we can start from first entity to get second entities and oppisite way
 * **Embedded H2**: this database starts together with an application. It means that we don't have to configure database separetly
 * **API**: Application Programming Interface is designed for communication between machines
 * **REST**: it's communication HTTP protocol with some set of rules
