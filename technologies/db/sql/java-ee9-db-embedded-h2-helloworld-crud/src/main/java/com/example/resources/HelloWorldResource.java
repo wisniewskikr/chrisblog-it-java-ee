@@ -13,7 +13,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-import com.example.models.HelloWorldModel;
+import com.example.entities.HelloWorldEntity;
 import com.example.models.InfoModel;
 import com.example.services.HelloWorldService;
 
@@ -33,14 +33,14 @@ public class HelloWorldResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
 	public Response list() {	
-		List<HelloWorldModel> models = helloWorldService.findAll();
+		List<HelloWorldEntity> models = helloWorldService.findAll();
 		return Response.ok(models).build();
 	}
 
 	@GET
     @Path("/{id}")
 	public Response view(@PathParam("id") Long id) {
-		HelloWorldModel model = null;
+		HelloWorldEntity model = null;
 		try {
 			model = helloWorldService.findById(id);
 		} catch (Exception e) {
@@ -51,7 +51,7 @@ public class HelloWorldResource {
 
 	@POST
     @Consumes(MediaType.APPLICATION_JSON)
-	public Response create(HelloWorldModel helloWorldModel) {
+	public Response create(HelloWorldEntity helloWorldModel) {
 		String message = null;
 		try {
 			message = helloWorldService.save(helloWorldModel);
@@ -63,7 +63,7 @@ public class HelloWorldResource {
 
 	@PUT
     @Consumes(MediaType.APPLICATION_JSON)
-	public Response edit(HelloWorldModel helloWorldModel) {
+	public Response edit(HelloWorldEntity helloWorldModel) {
 		String message = null;
 		try {
 			message = helloWorldService.save(helloWorldModel);

@@ -4,48 +4,57 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import com.example.entities.HelloWorldEntity;
+
+import jakarta.ejb.Stateless;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 
-import com.example.models.HelloWorldModel;
-
-@ApplicationScoped
+@Stateless
 public class HelloWorldService {
 
-	private List<HelloWorldModel> messages = new ArrayList<>();
+	@PersistenceContext
+    private EntityManager em;
 	
-	public String save(HelloWorldModel helloWorldModel) {
+	public String save(HelloWorldEntity helloWorldEntity) {
 
-		Objects.requireNonNull(helloWorldModel.getId(), "Message requires argument 'id'");
-		Objects.requireNonNull(helloWorldModel.getText(), "Message requires argument 'text'");
+		Objects.requireNonNull(helloWorldEntity.getId(), "Message requires argument 'id'");
+		Objects.requireNonNull(helloWorldEntity.getMessage(), "Message requires argument 'text'");
 
 		String result = "Message was updated";	
 
 		try {
-			deleteById(helloWorldModel.getId());
+			deleteById(helloWorldEntity.getId());
 		} catch (Exception e) {
 			result = "New Message was added";
 		}
 
-		messages.add(helloWorldModel);
+		em.persist(helloWorldEntity);
 
 		return result;
 
 	}
 	
-	public HelloWorldModel findById(Long id) {
-		return messages.stream().filter((message) -> message.getId() == id).findFirst()
-			.orElseThrow((() -> new RuntimeException("There is no message with id: " + id)));
+	public HelloWorldEntity findById(Long id) {
+		return em.find(HelloWorldEntity.class, id);
 	}
 
-	public List<HelloWorldModel> findAll() {
-		return messages;	
+	public List<HelloWorldEntity> findAll() {
+		return em.createQuery("SELECT h FROM HelloWorldEntity h", HelloWorldEntity.class)
+        .getResultList();
 	}
 
 	public String deleteById(Long id) {
-		boolean result = messages.removeIf(message -> message.getId() == id);
-		if (!result) {
+
+        HelloWorldEntity helloWorldEntity = em.find(HelloWorldEntity.class, id);
+		
+		if (helloWorldEntity == null) {
 			throw new RuntimeException("There is no message with id: " + id);
 		} 
+
+        em.remove(helloWorldEntity.getId());
+
 		return "Message was deleted"; 
 	}
 
