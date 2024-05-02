@@ -72,9 +72,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **CRUD** (Create, Read, Update, Delete) operations in an application **REST API** in **Java** programming language with usage **Java EE 8** framework. This application enables adding, reading, updating and deleting messages.
+The goal of this project is to present how to implement **CRUD** (Create, Read, Update, Delete) operations in an application **REST API** in **Java** programming language with usage **Java EE 9** framework. This application enables adding, reading, updating and deleting messages.
 
-Application is deployed on **payara micro** in version 5.
+Application is deployed on **payara micro** in version 6.
 
 ##### Flow
 The following flow takes place in this project:
