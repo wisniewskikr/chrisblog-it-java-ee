@@ -1,13 +1,11 @@
 package com.example.services;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 import com.example.entities.HelloWorldEntity;
 
 import jakarta.ejb.Stateless;
-import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
@@ -20,7 +18,7 @@ public class HelloWorldService {
 	public String save(HelloWorldEntity helloWorldEntity) {
 
 		Objects.requireNonNull(helloWorldEntity.getId(), "Message requires argument 'id'");
-		Objects.requireNonNull(helloWorldEntity.getMessage(), "Message requires argument 'text'");
+		Objects.requireNonNull(helloWorldEntity.getMessage(), "Message requires argument 'message'");
 
 		String result = "Message was updated";	
 
