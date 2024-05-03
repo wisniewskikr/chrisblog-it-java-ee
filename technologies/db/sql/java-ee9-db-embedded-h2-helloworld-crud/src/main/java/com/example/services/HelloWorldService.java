@@ -53,7 +53,7 @@ public class HelloWorldService {
 			throw new RuntimeException("There is no message with id: " + id);
 		} 
 
-        em.remove(helloWorldEntity.getId());
+        em.remove(helloWorldEntity);
 
 		return "Message was deleted"; 
 	}
