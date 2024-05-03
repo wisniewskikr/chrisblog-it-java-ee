@@ -23,7 +23,7 @@ Usage steps:
    [
       {
       "id": 1,
-      "message": "Hello World 1"
+      "message": "Hello World"
       }
    ]
    ```
@@ -32,7 +32,7 @@ Usage steps:
    ```
    {
     "id": 1,
-    "message": "Hello World 1 Updated"
+    "message": "Hello World Updated"
    }
    ```
    * Expected message **Message was updated**
@@ -41,7 +41,7 @@ Usage steps:
    ```   
    {
      "id": 1,
-     "message": "Hello World 1 Updated"
+     "message": "Hello World Updated"
    }   
    ```
 1. In a http client (e.g. Postman) use **DELETE** method and visit `http://localhost:8080/rest/v1/messages/1`
