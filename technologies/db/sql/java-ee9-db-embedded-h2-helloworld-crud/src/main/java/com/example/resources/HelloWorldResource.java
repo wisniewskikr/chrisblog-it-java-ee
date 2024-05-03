@@ -66,7 +66,7 @@ public class HelloWorldResource {
 	public Response edit(HelloWorldEntity helloWorldModel) {
 		String message = null;
 		try {
-			message = helloWorldService.save(helloWorldModel);
+			message = helloWorldService.update(helloWorldModel);
 		} catch (Exception e) {
 			return Response.status(400).entity(new InfoModel(e.getMessage())).build();
 		}			

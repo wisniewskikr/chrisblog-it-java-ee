@@ -20,17 +20,9 @@ public class HelloWorldService {
 		Objects.requireNonNull(helloWorldEntity.getId(), "Message requires argument 'id'");
 		Objects.requireNonNull(helloWorldEntity.getMessage(), "Message requires argument 'message'");
 
-		String result = "Message was updated";	
-
-		try {
-			deleteById(helloWorldEntity.getId());
-		} catch (Exception e) {
-			result = "New Message was added";
-		}
-
 		em.persist(helloWorldEntity);
 
-		return result;
+		return "Message was updated";
 
 	}
 	
@@ -41,6 +33,17 @@ public class HelloWorldService {
 	public List<HelloWorldEntity> findAll() {
 		return em.createQuery("SELECT h FROM HelloWorldEntity h", HelloWorldEntity.class)
         .getResultList();
+	}
+
+	public String update(HelloWorldEntity helloWorldEntity) {
+		
+		Objects.requireNonNull(helloWorldEntity.getId(), "Message requires argument 'id'");
+		Objects.requireNonNull(helloWorldEntity.getMessage(), "Message requires argument 'message'");
+
+		em.merge(helloWorldEntity);
+		
+		return "Message was updated";
+
 	}
 
 	public String deleteById(Long id) {
