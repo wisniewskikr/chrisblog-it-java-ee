@@ -7,8 +7,8 @@ USAGE COMMANDS
 
 Usage steps:
 1. In a command line tool create package with `mvn clean package`
-1. In a command line tool start application with `java -jar pm.jar --deploy .\target\api.war --port 8080`
-1. In a http client (e.g. Postman) use **POST** method and visit `http://localhost:8080/api/v1/messages`
+1. In a command line tool start application with `java -jar pm.jar --deploy .\target\rest.war --port 8080`
+1. In a http client (e.g. Postman) use **POST** method and visit `http://localhost:8080/rest/v1/messages`
    * Choose **Body -> raw -> JSON** and add following JSON:
    ```
    {
@@ -17,7 +17,7 @@ Usage steps:
    }
    ```
    * Expected message **New Message was added**
-1. In a http client (e.g. Postman) use **GET** method and visit `http://localhost:8080/api/v1/messages`
+1. In a http client (e.g. Postman) use **GET** method and visit `http://localhost:8080/rest/v1/messages`
    * Expected following JSON:
    ```
    [
@@ -27,7 +27,7 @@ Usage steps:
       }
    ]
    ```
-1. In a http client (e.g. Postman) use **PUT** method and visit `http://localhost:8080/api/v1/messages`
+1. In a http client (e.g. Postman) use **PUT** method and visit `http://localhost:8080/rest/v1/messages`
    * Choose **Body -> raw -> JSON** and add following JSON:
    ```
    {
@@ -36,7 +36,7 @@ Usage steps:
    }
    ```
    * Expected message **Message was updated**
-1. In a http client (e.g. Postman) use **GET** method and visit `http://localhost:8080/api/v1/messages/1`
+1. In a http client (e.g. Postman) use **GET** method and visit `http://localhost:8080/rest/v1/messages/1`
    * Expected following JSON:
    ```   
    {
@@ -44,9 +44,9 @@ Usage steps:
      "text": "Hello World 1 Updated"
    }   
    ```
-1. In a http client (e.g. Postman) use **DELETE** method and visit `http://localhost:8080/api/v1/messages/1`
+1. In a http client (e.g. Postman) use **DELETE** method and visit `http://localhost:8080/rest/v1/messages/1`
    * Expected message **Message was deleted**
-1. In a http client (e.g. Postman) use **GET** method and visit `http://localhost:8080/api/v1/messages`
+1. In a http client (e.g. Postman) use **GET** method and visit `http://localhost:8080/rest/v1/messages`
    * Expected **empty list**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
